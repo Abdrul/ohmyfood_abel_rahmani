@@ -28,5 +28,9 @@ p, h1, h2, h3, h4, h5, h6 {
     --primaire: #9356DC;
     --secondaire: #FF79DA;
     --tertiaire: #99E2D0;
-
+    --ParisBelleVille: #eaeaea;
+    --Réserver: #f6f6f6;
+    --hover: #f5edff;
+    --background-vert: #99e2d0;
+    --nouveau: #008766;
 }
