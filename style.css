@@ -41,3 +41,24 @@ p, h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     margin-top: 30px;
 }
+
+.first-presentation {
+    margin: 20px 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--ParisBelleVille);
+    align-items: center;
+    box-shadow: inset 0px 3px 2px 0px #afafaf;;
+}
+
+.first-presentation p {
+    padding: 0 45px 0 20px;
+    font-weight: 500;
+    color: rgb(80, 76, 76);
+}
+
+.first-presentation i {
+    font-size: 20px;
+    color: rgb(80, 76, 76);
+}
