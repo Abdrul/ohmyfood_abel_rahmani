@@ -96,3 +96,12 @@ h1 {
     padding: 30px 0 15px 15px;
 }
 
+.steps {
+    list-style-type: none;
+}
+
+.steps li {
+    background: gray;
+    border-radius: 150px;
+    margin-bottom: 15px;
+}
