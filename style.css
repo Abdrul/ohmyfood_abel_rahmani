@@ -114,9 +114,17 @@ h1 {
     box-shadow: 0 3px 2px 0 #afafaf;
     background: var(--Réserver);
     font-weight: 700;
+    font-size: 18px;
+    transition: .3s;
 }
 
-.steps li::before{
+.steps li:hover {
+    background: var(--hover);
+    color: var(--primaire);
+}
+
+
+.steps li::before {
     counter-increment: liste;
     content: counter(liste);
     color: #fff;
@@ -131,5 +139,6 @@ h1 {
 
 .steps i {
     padding: 0 15px;
-    color: rgb(80, 76, 76);
+    font-size: 18px;
 }
+
