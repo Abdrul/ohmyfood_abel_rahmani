@@ -19,6 +19,10 @@ img, picture, video, canvas, svg {
 input, button, textarea, select {
     font: inherit;
 }
+a {
+    color: inherit;
+    text-decoration: none;
+}
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
@@ -143,9 +147,13 @@ h1 {
     font-size: 18px;
 }
 
+.third-article {
+    background: var(--Réserver);
+}
+
 .restaurant {
     padding: 0 25px;
-    background: var(--Réserver);
+    padding-bottom: 65px;
 }
 
 #restaurant-title {
@@ -172,16 +180,48 @@ h1 {
 }
 
 .dish-name {
-    padding: 10px 0 0 15px;
+    padding: 15px 0 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.icone-heart {
+    border: none;
+    background: none;
+}
+
+.icone-heart i {
+    padding-right: 25px;
+    font-size: 24px;
+    color: var(--primaire);
+}
+.heartIcone:hover::before{
+    color: var(--secondaire);
+}
+
 
 .footer-flex {
     background: #353535;
     color: #fff;
     padding: 0 25px;
+    padding-bottom: 30px;
 }
 
 .footer-title {
     font-family: 'Shrikhand', sans-serif;
     letter-spacing: 0.5px;
+    padding: 25px 0 15px;
 }
+
+.footer-div {
+    display: flex;
+    align-items: baseline;
+    padding-bottom: 5px;
+}
+
+.footer-div i {
+    width: 25px;
+    font-size: 12px;
+}
+
