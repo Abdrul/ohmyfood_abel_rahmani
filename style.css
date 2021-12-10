@@ -153,25 +153,35 @@ h1 {
 }
 
 .dish {
-    margin-bottom: 45px;
-    background: lightsalmon;
+    margin-bottom: 15px;
     border-radius: 15px;
-    height: 350px;
+    height: 265px;
+    box-shadow: 0 0 5px gray;
 }
 
 .dish-view {
-    height: 75%;
+    height: 70%;
 }
 
 
 .dish-img {
     border-radius: 15px 15px 0 0;
     object-fit: cover;
-    height: 100%;
     width: 100%;
+    height: 100%;
 }
 
 .dish-name {
     padding: 10px 0 0 15px;
-    height: 35%;
+}
+
+.footer-flex {
+    background: #353535;
+    color: #fff;
+    padding: 0 25px;
+}
+
+.footer-title {
+    font-family: 'Shrikhand', sans-serif;
+    letter-spacing: 0.5px;
 }
