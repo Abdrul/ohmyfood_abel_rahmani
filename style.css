@@ -45,6 +45,18 @@ a {
     color: inherit;
 }
 
+:root {
+    --primaire: #9356dc;
+    --secondaire: #FF79DA;
+    --tertaire: #99E2D0;
+    --Parisbelleville: #EAEAEA;
+    --reservez: #F6F6F6;
+    --hover: #F5EDFF;
+    --backgroundnouveau: #99E2D0;
+    --nouveau: #008766;
+    --footer: #353535;
+}
+
 .logo-div {
     display: flex;
     justify-content: center;
@@ -57,7 +69,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #eaeaea;
+    background: var(--Parisbelleville);
     box-shadow: inset 0 3px 2px #afafaf;
 }
 
@@ -75,7 +87,7 @@ a {
 
 .header-presentation {
     text-align: center;
-    background: #f6f6f6;
+    background: var(--reservez);
     padding: 0 25px;
 }
 .header-presentation h2 {
@@ -92,7 +104,7 @@ a {
     padding: 10px 15px;
     border-radius: 250px;
     border: none;
-    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    background: linear-gradient(to bottom right, var(--secondaire), var(--primaire));
     color: white;
     transition: 0.8s;
     box-shadow: 1px 3px 3px lightgrey;
@@ -121,14 +133,14 @@ a {
     margin-bottom: 15px;
     padding: 20px;
     box-shadow: 0 3px 2px 0 #afafaf;
-    background: #f6f6f6;
+    background: var(--reservez);
     font-weight: 700;
     font-size: 18px;
     transition: 0.3s;
 }
 .steps li:hover {
     background: #f5edff;
-    color: #9356DC;
+    color: var(--primaire);
 }
 .steps li::before {
     counter-increment: liste;
@@ -138,7 +150,7 @@ a {
     width: 25px;
     height: auto;
     margin-left: -28px;
-    background: #9356DC;
+    background: var(--primaire);
     border-radius: 150px;
     padding: 0 8px;
 }
@@ -148,7 +160,7 @@ a {
 }
 
 .third-article {
-    background: #f6f6f6;
+    background: var(--reservez);
 }
 
 .restaurant {
@@ -179,8 +191,8 @@ a {
     content: "Nouveau";
     top: 10px;
     right: 10px;
-    background: #99e2d0;
-    color: #008766;
+    background: var(--tertaire);
+    color: var(--nouveau);
     padding: 5px 10px;
     border-radius: 5px;
     font-weight: 700;
@@ -207,11 +219,11 @@ a {
     -webkit-text-stroke: 2px #000;
 }
 .icone-heart:hover {
-    background: linear-gradient(#FF79DA, #9356DC);
+    background: linear-gradient(var(--secondaire), var(--primaire));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    -webkit-text-stroke: 1px #FF79DA;
+    -webkit-text-stroke: 1px var(--secondaire);
     animation: heart 2s;
 }
 
@@ -222,12 +234,12 @@ a {
     }
     100% {
     font-size: 24px;
-    -webkit-text-stroke: 1px #FF79DA;
+    -webkit-text-stroke: 1px var(--secondaire);
     }
 }
 .footer-flex {
     padding: 0 25px;
-    background: #353535;
+    background: var(--footer);
     color: #fff;
     padding-bottom: 30px;
 }
@@ -248,4 +260,64 @@ a {
     font-size: 12px;
 }
 
+.logo-div-other {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: left;
+    gap: 100px;
+}
+
+.main-menu1 {
+    background: var(--reservez);
+}
+
+.background-article {
+    background: url(./img/dish2.jpg) center center / cover;
+    height: 250px;
+}
+
+.entree {
+    padding: 0 25px;
+}
+
+.title-of-page {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    font-family: 'Shrikhand', sans-serif;
+    padding: 25px 0 15px 0;
+    font-size: 24px;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+.title-article {
+    text-transform: uppercase;
+    padding: 20px 0 25px 0;
+}
+
+.global-entree {
+    background: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px grey;
+}
+
+.strong {
+    font-weight: 900;
+}
+
+.description-entree {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-nav {
+    text-align: center;
+}
+
+.button-order {
+    padding: 10px 30px;
+}
   /*# sourceMappingURL=style.css.map */
