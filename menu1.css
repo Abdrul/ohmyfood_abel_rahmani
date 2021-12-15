@@ -79,21 +79,21 @@ a {
 }
 
 .background-article {
-    background: url(./img/dish2.jpg) center center / cover fixed;
-    height: 500px;
+    background: url(./img/dish2.jpg) center center / cover ;
+    height: 250px;
 
 }
 
-.first-article {
+.article-menu1 {
     background-color: #fff;
     border-radius: 60px 60px 0 0;
     margin-top: -30px;
-    animation: slidedown 3s;
+    padding: 0 15px;
 }
 
 @keyframes slidedown {
     from {
-        transform: translateY(200px);
+        transform: translateY(300px);
         opacity: 0;
     }
     to {
@@ -103,7 +103,15 @@ a {
 }
 
 .entree {
-    padding: 0 15px;
+    animation: slidedown 1s ease-out;
+}
+
+.plate {
+    animation: slidedown 1.5s ease-out;
+}
+
+.dessert {
+    animation: slidedown 2s ease-out;
 }
 
 .title-of-page {
