@@ -57,6 +57,66 @@ a {
     --footer: #353535;
 }
 
+.loader-container {
+    border-radius: 5px;
+    background: #333;
+    width: 400px;
+    height: 400px;
+    margin: 100px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    display: block;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border-bottom: crimson;
+    border: 7px solid transparent;
+    animation: spin 2s linear infinite;
+    /* background: blue; */
+}
+
+.loader::before, .loader::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 7px solid transparent;
+}
+
+.loader::before {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border-top-color: rgb(252, 45, 86);
+    animation: spin 3s linear infinite;
+    /* background: red; */
+}
+
+.loader::after {
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    border-top-color: rgb(192, 108, 125);
+    animation: spin 1.5s linear infinite;
+    /* background: orange; */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 .logo-div {
     display: flex;
     justify-content: center;
@@ -212,31 +272,41 @@ a {
     align-items: center;
 }
 
-.icone-heart {
-    padding-right: 25px;
+.heart-anim {
     font-size: 24px;
-    color: transparent;
-    -webkit-text-stroke: 2px #000;
-}
-.icone-heart:hover {
-    background: linear-gradient(var(--secondaire), var(--primaire));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--secondaire);
-    animation: heart 2s;
+    position: relative;
 }
 
-@keyframes heart {
-    0% {
-    font-size: 18px;
-    -webkit-text-stroke: 1px white;
-    }
-    100% {
-    font-size: 24px;
-    -webkit-text-stroke: 1px var(--secondaire);
-    }
+.coeurplein {
+    position: absolute;
+    right: 25px;
+    top: -10px;
 }
+
+.coeurvide {
+    position: absolute;
+    right: 25px;
+    top: -10px;
+}
+.coeurplein
+{
+    color:transparent;
+    background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: scale(0);
+    transition-duration: 1.5s;
+}
+.heart-anim:hover  .coeurplein
+{
+transform: scale(1);
+}
+.heart-anim:hover .coeurvide
+{
+transform: scale(0);
+transition-delay: 2s;
+}
+
 .footer-flex {
     padding: 0 25px;
     background: var(--footer);

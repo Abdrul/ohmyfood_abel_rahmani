@@ -123,31 +123,41 @@ a {
     font-size: 22px;
 }
 
-.icone-heart {
-    padding-right: 25px;
+.heart-anim {
     font-size: 24px;
-    color: transparent;
-    -webkit-text-stroke: 2px #000;
-}
-.icone-heart:hover {
-    background: linear-gradient(var(--secondaire), var(--primaire));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-stroke: 1px var(--secondaire);
-    animation: heart 2s;
+    position: relative;
 }
 
-@keyframes heart {
-    0% {
-    font-size: 18px;
-    -webkit-text-stroke: 1px white;
-    }
-    100% {
-    font-size: 24px;
-    -webkit-text-stroke: 1px var(--secondaire);
-    }
+.coeurplein {
+    position: absolute;
+    right: 25px;
+    top: -18px;
 }
+
+.coeurvide {
+    position: absolute;
+    right: 25px;
+    top: -18px
+}
+.coeurplein
+{
+    color:transparent;
+    background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: scale(0);
+    transition-duration: 1.5s;
+}
+.heart-anim:hover  .coeurplein
+{
+transform: scale(1);
+}
+.heart-anim:hover .coeurvide
+{
+transform: scale(0);
+transition-delay: 2s;
+}
+
 
 .title-article {
     text-transform: uppercase;
@@ -176,7 +186,15 @@ a {
 
 .description-entree {
     display: flex;
-    justify-content: space-between;
+    position: relative;
+    /* justify-content: space-between; */
+}
+
+.description-entree i {
+    color: var(--backgroundnouveau);
+    background: black;
+    position: absolute;
+
 }
 
 
