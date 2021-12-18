@@ -58,69 +58,59 @@ a {
 }
 
 .loader-container {
-    border-radius: 5px;
-    background: #333;
-    width: 400px;
-    height: 400px;
-    margin: 100px auto 0;
+    position: fixed;
+    background: #f1f1f156;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+    animation: hideAnimation 0s ease-in 1.5s;
+    animation-fill-mode: forwards;
 }
 
 .loader {
-    display: block;
-    position: relative;
-    width: 250px;
-    height: 250px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    border-bottom: crimson;
-    border: 7px solid transparent;
-    animation: spin 2s linear infinite;
-    /* background: blue; */
+    margin: 0 15px;
+    animation: loader infinite 0.3s alternate;
 }
 
-.loader::before, .loader::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    border: 7px solid transparent;
+.loader1 {
+    background: linear-gradient(to bottom right, var(--secondaire), var(--primaire));
 }
 
-.loader::before {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border-top-color: rgb(252, 45, 86);
-    animation: spin 3s linear infinite;
-    /* background: red; */
+.loader2 {
+    animation-delay: 0.05s;
+    background: linear-gradient(to top left, var(--secondaire), var(--primaire));
 }
 
-.loader::after {
-    top: 25px;
-    left: 25px;
-    right: 25px;
-    bottom: 25px;
-    border-top-color: rgb(192, 108, 125);
-    animation: spin 1.5s linear infinite;
-    /* background: orange; */
+.loader3 {
+    animation-delay: 0.1s;
+    background: linear-gradient(to top right, var(--secondaire), var(--primaire));
 }
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
+@keyframes loader {
     100% {
-        transform: rotate(360deg);
+        transform: translateY(-30px);
     }
 }
 
+@keyframes hideAnimation {
+    to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    }
+}
 
 .logo-div {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    padding-top: 30px;
 }
 
 .first-presentation {
